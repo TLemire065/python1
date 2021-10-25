@@ -6,7 +6,7 @@
 from random import randint, randrange
 
 
-def feature2(name):
+def feature3(name):
     print()
 
 # Press the green button in the gutter to run the script.
