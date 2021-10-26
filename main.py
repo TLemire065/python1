@@ -6,6 +6,7 @@ import platform
 
 
 def feature1():
+    # Displays users OS version and type
     print("OS Version:", platform.version())
 
 
