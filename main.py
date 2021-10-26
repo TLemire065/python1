@@ -7,6 +7,7 @@ from datetime import date
 
 
 def feature3():
+    # Displays the current date in YEAR-MONTH-DAY format
     print("Today's date is:", date.today())
 
 
