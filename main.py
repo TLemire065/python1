@@ -5,6 +5,7 @@
 
 import re
 
+
 # Gets input from user
 def user_input():
     user_string = input("Enter A String: ")
@@ -16,7 +17,6 @@ def string_split1(user_sentence):
     # Uses split method and then prints each word
     for word in user_sentence.split():
         print(word)
-
 
 
 def string_split2(user_sentence):
