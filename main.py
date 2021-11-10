@@ -4,35 +4,21 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 import re
+import os
 
 
-# Gets input from user
-def user_input():
-    user_string = input("Enter A String: ")
-    return user_string
+def os_module():
+    # Saves as variable
+    os_uname = str(os.uname())
 
-
-def string_split1(user_sentence):
-
-    # Uses split method and then prints each word
-    for word in user_sentence.split():
-        print(word)
-
-
-def string_split2(user_sentence):
-
-    # Uses re split method and then prints each work
-    string_split = re.split(r"\s+", user_sentence)
-    for word in string_split:
-        print(word)
+    # Prints os version
+    print('OS Version:', re.findall('(?<=version=)[^:]*',os_uname)[0])
+    # Prints os machine
+    print('OS Machine:', re.findall('(?<=machine=)[^/)]*', os_uname)[0])
+    # Prints os name
+    print('OS Name:', os.name)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-
-    # Gets users input
-    user_sentence = user_input()
-    # Invokes first string function
-    string_split2(user_sentence)
-    # Invokes second string function
-    string_split2(user_sentence)
+    os_module()
