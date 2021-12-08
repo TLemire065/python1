@@ -21,4 +21,7 @@ def os_module():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    os_module()
+    try:
+        os_module()
+    except AttributeError:
+        print("Unable to execute, non-linux machine detected.")
